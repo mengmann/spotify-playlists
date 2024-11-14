@@ -6,13 +6,13 @@ Import / export / delete Spotify playlists and more (saved tracks, albums, shows
 ## Usage
 
 ```bash
-usage: spotify-playlists.py [-h] {import,export,delete} [path]
+usage: spotify-playlists.py [-h] {export,import,delete} [path]
 
 Spotify Playlist Management Script
 
 positional arguments:
-  {import,export,delete}
-                        Command to execute: 'import' to import a playlist, 'export' to export playlists, 'delete' to delete playlists
+  {export,import,delete}
+                        Command to execute: 'export' to export library items, 'import' to import library items, 'delete' to delete all library items
   path                  File path for import or directory path for export (not needed for delete)
 
 options:
@@ -20,13 +20,27 @@ options:
 
 ```
 
-Examples:
+**Examples:**
 
-* `./spotify-playlists.py export mypath`
-* `./spotify-playlists.py import mypath/MyPlaylist.xspf`
-* `./spotify-playlists.py import mypath/MyPlaylist.xspf`
-* `./spotify-playlists.py delete`
+* export playlists, saved tracks, albums and shows:
+```bash
+./spotify-playlists.py export mypath
+```
 
+* import playlists, saved tracks, albums and shows from directory:
+```bash
+./spotify-playlists.py import mypath
+```
+
+* just import a single playlist:
+```bash
+./spotify-playlists.py import mypath/MyPlaylist.xspf
+```
+
+* delete playlists, saved tracks, albums and shows:
+```bash
+./spotify-playlists.py delete
+```
 
 ## Install
 

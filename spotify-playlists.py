@@ -494,10 +494,11 @@ def import_shows(sp, filename):
 def main():
     # Set up argument parser
     parser = argparse.ArgumentParser(description="Spotify Playlist Management Script")
+    help_txt = """Command to execute: 'export' to export library items, 
+    'import' to import library items, 
+    'delete' to delete all library items"""
     parser.add_argument(
-        "command",
-        choices=["import", "export", "delete"],
-        help="Command to execute: 'import' to import a playlist, 'export' to export playlists, 'delete' to delete playlists",
+        "command", choices=["export", "import", "delete"], help=help_txt
     )
     parser.add_argument(
         "path",
