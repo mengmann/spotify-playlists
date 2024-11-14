@@ -1,23 +1,40 @@
 # Spotify Playlists
 
-Import / export Spotify playlists
+Import / export / delete Spotify playlists and more (saved tracks, albums, shows)
 
 
 ## Usage
 
-    ./spotify-playlists.py <import FILENAME / export DIR>
+```bash
+usage: spotify-playlists.py [-h] {import,export,delete} [path]
+
+Spotify Playlist Management Script
+
+positional arguments:
+  {import,export,delete}
+                        Command to execute: 'import' to import a playlist, 'export' to export playlists, 'delete' to delete playlists
+  path                  File path for import or directory path for export (not needed for delete)
+
+options:
+  -h, --help            show this help message and exit
+
+```
 
 Examples:
 
-* `./spotify-playlists.py export playlists`
-* `./spotify-playlists.py import playlists/MyPlaylist.xspf`
+* `./spotify-playlists.py export mypath`
+* `./spotify-playlists.py import mypath/MyPlaylist.xspf`
+* `./spotify-playlists.py import mypath/MyPlaylist.xspf`
+* `./spotify-playlists.py delete`
 
 
 ## Install
 
-* `python3 -m venv venv`
-* `venv/bin/pip install -r requirements.txt`
-
+```bash
+python3 -m venv venv
+venv/bin/pip install -r requirements.txt
+source venv/bin/activate
+```
 
 ## Setup
 
