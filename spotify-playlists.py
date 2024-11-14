@@ -540,7 +540,7 @@ def main():
         export_albums(sp, args.path)
         export_shows(sp, args.path)
     elif args.command == "delete":
-        # delete_all_user_playlists(sp)
+        delete_all_user_playlists(sp)
         delete_all_saved_tracks(sp)
         delete_all_saved_albums(sp)
         delete_all_saved_shows(sp)
